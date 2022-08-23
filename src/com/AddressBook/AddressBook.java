@@ -7,6 +7,7 @@ public class AddressBook {
     ArrayList<Contacts> contactList = new ArrayList<>();
 
     void addContacts() {
+
         Scanner scan = new Scanner(System.in);
         System.out.println("Enter name -> ");
         String name = scan.next();
@@ -27,7 +28,6 @@ public class AddressBook {
 
     void editContacts() {
 
-
         Scanner scan = new Scanner(System.in);
         System.out.println("Enter the name of person to edit -> ");
         String pName = scan.next();
@@ -46,10 +46,12 @@ public class AddressBook {
                 contact.setAge(age);
                 contact.setCity(city);
                 contact.setState(state);
+
             }
         }
     }
     void deleteContacts() {
+
         Scanner scan = new Scanner(System.in);
         System.out.println("Enter the name of person to Delete -> ");
         String pName = scan.next();
@@ -58,5 +60,11 @@ public class AddressBook {
                 contactList.remove(contact);
             }
         }
+    }
+    @Override
+    public String toString() {
+        return "AddressBook{" +
+                "contactList=" + contactList +
+                '}';
     }
 }

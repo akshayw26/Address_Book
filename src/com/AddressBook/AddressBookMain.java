@@ -37,5 +37,7 @@ public class AddressBookMain {
         while(userInput != 0);
 
         addressBookMap.put(FAMILY_ADDRESS_BOOK, familyAddressBook);
+
+        System.out.println(addressBookMap.toString());
     }
 }
