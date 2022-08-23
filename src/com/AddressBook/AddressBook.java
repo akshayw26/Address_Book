@@ -49,4 +49,14 @@ public class AddressBook {
             }
         }
     }
+    void deleteContacts() {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter the name of person to Delete -> ");
+        String pName = scan.next();
+        for (Contacts contact : contactList) {
+            if (contact.getName().equals(pName)) {
+                contactList.remove(contact);
+            }
+        }
+    }
 }

@@ -14,7 +14,7 @@ public class AddressBookMain {
         AddressBook familyAddressBook = new AddressBook();
         AddressBook professionalAddressBook = new AddressBook();
         do{
-            System.out.println("Enter 1 to Add contact\nEnter 2 to Edit contact");
+            System.out.println("Enter 1 to Add Contact\nEnter 2 to Edit Contact\nEnter 3 to Delete Contact");
             userInput = scan.nextInt();
             switch (userInput){
                 case 1:
@@ -25,12 +25,16 @@ public class AddressBookMain {
                     familyAddressBook.editContacts();
                     System.out.println(familyAddressBook.contactList);
                     break;
-
+                case 3:
+                    familyAddressBook.deleteContacts();
+                    System.out.println(familyAddressBook.contactList);
+                    break;
                 default:
                     System.out.println("Exited from Address Book");
+
             }
         }
-        while(userInput != 0);s
+        while(userInput != 0);
 
         addressBookMap.put(FAMILY_ADDRESS_BOOK, familyAddressBook);
     }
