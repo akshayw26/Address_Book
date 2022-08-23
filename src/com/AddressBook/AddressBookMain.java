@@ -30,7 +30,7 @@ public class AddressBookMain {
                     System.out.println("Exited from Address Book");
             }
         }
-        while(userInput != 0);s
+        while(userInput != 0);
 
         addressBookMap.put(FAMILY_ADDRESS_BOOK, familyAddressBook);
     }
